@@ -80,7 +80,22 @@
 						</execution>
 					</executions>
 				</plugin>
-				<!-- Plugin para executar o jar file -->
+                <plugin>
+        			<groupId>org.codehaus.mojo</groupId>
+        				<artifactId>exec-maven-plugin</artifactId>
+        					<version>3.0.0</version>
+        			<executions>
+          				<execution>
+							<goals>
+							  <goal>java</goal>
+							</goals>
+          				</execution>
+        			</executions>
+					<configuration>
+						<mainClass>com.Grupo12.App</mainClass>
+					</configuration>
+      			</plugin>
+				<!-- Plugin para executar o jar file
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>exec-maven-plugin</artifactId>
@@ -89,6 +104,7 @@
 						<mainClass>com.Grupo12.App</mainClass>
 					</configuration>
 				</plugin>
+                -->
 				<!-- Plugin para gerar relatório de testes -->
 				<plugin>
                     <groupId>org.apache.maven.plugins</groupId>
